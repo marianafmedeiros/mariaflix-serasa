@@ -110,25 +110,30 @@ def delete_user(user_id):
             conn.close()
 
 
-def retrieve_user(user_id):
+def retrieve_user(user_id=None):
     try:
         conn = db_connect()
         cursor = conn.cursor()
 
-        retrieve_user = "SELECT email, username, created_at FROM users WHERE user_id = %s"
-        cursor.execute(retrieve_user, (user_id, ))
-        result = cursor.fetchone()
-        if result:
-            email, username, created_at = result
+        if user_id:
+            retrieve_user = "SELECT user_id, username, email, created_at FROM users WHERE user_id = %s"
+            cursor.execute(retrieve_user, (user_id, ))
+            results = cursor.fetchone()
+        else:
+            retrieve_user = "SELECT user_id, email, username, created_at FROM users"
+            cursor.execute(retrieve_user, (user_id, ))
+            results = cursor.fetchall()
+
+        if results:
+            users = [{"user_id": result[0], "username": result[1], "email": result[2], "registered at": datetime.strftime(result[3], "%H:%M:%S - %d/%m/%Y")} for result in results]
+            
         else:
             logger.info("There is no user with this id")
             return
 
-        created_at = datetime.strftime(created_at, "%d/%m/%Y")
-        user_details = {"email": email, "username": username, "created_at": created_at}
-        logger.info(f"{user_details}")
+        logger.info(f"{users}")
         
-        return user_details
+        return users
 
     except (Exception, DatabaseError) as error:
         print_exc()
