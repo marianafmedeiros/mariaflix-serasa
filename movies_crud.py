@@ -118,25 +118,36 @@ def delete_movie(movie_title):
             conn.close()
 
 
-def retrieve_movie(movie_title):
+def retrieve_movie(movie_id=None):
     try:
         conn = db_connect()
         cursor = conn.cursor()
-
-        retrieve_show = "SELECT show_id FROM shows WHERE title = %s"
-        cursor.execute(retrieve_show, (movie_title, ))
-        show_id = cursor.fetchone()[0]
         
-        retrieve_movie = "SELECT * FROM movies WHERE show_id = %s"
-        cursor.execute(retrieve_movie, (show_id, ))
-        movie_id, show_id, movie_length, movie_year, created_at = cursor.fetchone()
+        if movie_id:
+            retrieve_movie = '''SELECT m.id, m.show_id, m.movie_length, m.year, s.title 
+                FROM movies m 
+                LEFT JOIN shows s ON m.show_id = s.show_id
+                WHERE m.id = %s'''
+            cursor.execute(retrieve_movie, (movie_id, ))
+            results = cursor.fetchone()
+        else:
+            retrieve_movie = "SELECT m.id, m.show_id, m.movie_length, m.year, s.title FROM movies m LEFT JOIN shows s ON m.show_id = s.show_id"
+            cursor.execute(retrieve_movie, (movie_id, ))
+            results = cursor.fetchall()
+        
         conn.commit()
 
-        created_at = datetime.strftime(created_at, "%d/%m/%Y")
-        movie_details = {"Title": movie_title, "year": movie_year, "length (minutes)": movie_length, "id": movie_id, "created_at": created_at}
-        logger.info(f"{movie_details}")
+        if results:
+            movies = [{"id": result[0], 
+            "show_id": result[1], 
+            "length": result[2], 
+            "year": result[3],
+            "title":result[4]
+            } for result in results ]
         
-        return movie_details
+        logger.info(movies)
+        
+        return movies
 
     except (Exception, DatabaseError) as error:
         print_exc()
