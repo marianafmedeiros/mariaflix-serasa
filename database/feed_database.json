@@ -1,0 +1,270 @@
+{
+    "movies": [
+        {
+            "title": "Pulp Fiction",
+            "year": 1994,
+            "length": 154
+        },
+        {
+            "title": "Fight Club",
+            "year": 1999,
+            "length": 139
+        },
+        {
+            "title": "Forrest Gump",
+            "year": 1994,
+            "length": 142
+        },
+        {
+            "title": "The Matrix",
+            "year": 1999,
+            "length": 136
+        },
+        {
+            "title": "Whiplash",
+            "year": 2014,
+            "length": 106
+        },
+        {
+            "title": "WALL·E",
+            "year": 2008,
+            "length": 98
+        },
+        {
+            "title": "Up",
+            "year": 2009,
+            "length": 96
+        },
+        {
+            "title": "Portrait of a Lady on Fire",
+            "year": 2019,
+            "length": 122
+        },
+        {
+            "title": "Green Book",
+            "year": 2018,
+            "length": 130
+        }
+    ],
+    "series": [
+        {
+            "title": "Dark",
+            "year": 2017,
+            "episodes": [
+                {
+                    "number": 1,
+                    "title": "Secrets",
+                    "season": 1,
+                    "length": 51,
+                    "release_date": "01/12/2017"
+                },
+                {
+                    "number": 2,
+                    "title": "Lies",
+                    "season": 1,
+                    "length": 44,
+                    "release_date": "01/12/2017"
+                },
+                {
+                    "number": 3,
+                    "title": "Past and Present",
+                    "season": 1,
+                    "length": 45,
+                    "release_date": "01/12/2017"
+                },
+                {
+                    "number": 4,
+                    "title": "Double Lives",
+                    "season": 1,
+                    "length": 47,
+                    "release_date": "01/12/2017"
+                },
+                {
+                    "number": 5,
+                    "title": "Truths",
+                    "season": 1,
+                    "length": 45,
+                    "release_date": "01/12/2017"
+                },
+                {
+                    "number": 6,
+                    "title": "Sic Mundus Creatus Est",
+                    "season": 1,
+                    "length": 51,
+                    "release_date": "01/12/2017"
+                },
+                {
+                    "number": 7,
+                    "title": "Crossroads",
+                    "season": 1,
+                    "length": 52,
+                    "release_date": "01/12/2017"
+                },
+                {
+                    "number": 8,
+                    "title": "As You Sow, so You Shall Reap",
+                    "season": 1,
+                    "length": 50,
+                    "release_date": "01/12/2017"
+                },
+                {
+                    "number": 9,
+                    "title": "Everything Is Now",
+                    "season": 1,
+                    "length": 55,
+                    "release_date": "01/12/2017"
+                },
+                {
+                    "number": 10,
+                    "title": "Alpha and Omega",
+                    "season": 1,
+                    "length": 57,
+                    "release_date": "01/12/2017"
+                }
+            ]
+        },
+        {
+            "title": "Black Mirror",
+            "year": 2011,
+            "episodes": [
+                {
+                "number": 1,
+                "title": "The National Anthem",
+                "season": 1,
+                "length": 44,
+                "release_date": "04/12/2011"
+                },
+                {
+                "number": 2,
+                "title": "Fifteen Million Merits",
+                "season": 1,
+                "length": 62,
+                "release_date": "11/12/2011"
+                },
+                {
+                "number": 3,
+                "title": "The Entire History of You",
+                "season": 1,
+                "length": 49,
+                "release_date": "18/12/2011"
+                },
+                {
+                "number": 1,
+                "title": "Be Right Back",
+                "season": 2,
+                "length": 48,
+                "release_date": "11/02/2013"
+                },
+                {
+                "number": 2,
+                "title": "White Bear",
+                "season": 2,
+                "length": 42,
+                "release_date": "18/02/2013"
+                },
+                {
+                "number": 3,
+                "title": "The Waldo Moment",
+                "season": 2,
+                "length": 43,
+                "release_date": "25/02/2013"
+                },
+                {
+                "number": 4,
+                "title": "White Christmas",
+                "season": 2,
+                "length": 73,
+                "release_date": "16/12/2014"
+                }
+            ]
+        }
+    ],
+    "users": [
+        {
+            "username": "marif",
+            "email": "marif@marif.com"
+        },
+        {
+            "username": "biaa",
+            "email": "biaa@biaa.com"
+        },
+        {
+            "username": "coffee",
+            "email": "coffee@coffee.com"
+        },
+        {
+            "username": "rodio",
+            "email": "rodio@rodio.com"
+        }
+    ],
+    "user_show": [
+        {
+            "user_id": 1,
+            "show_id": 1
+        },
+        {
+            "user_id": 1,
+            "show_id": 2
+        },
+        {
+            "user_id": 1,
+            "show_id": 3
+        },
+        {
+            "user_id": 1,
+            "show_id": 4
+        },
+        {
+            "user_id": 1,
+            "show_id": 4
+        },
+        {
+            "user_id": 1,
+            "show_id": 5
+        },
+        {
+            "user_id": 1,
+            "show_id": 6
+        },
+        {
+            "user_id": 1,
+            "show_id": 7
+        },
+        {
+            "user_id": 1,
+            "show_id": 8
+        },
+        {
+            "user_id": 1,
+            "show_id": 9
+        },
+        {
+            "user_id": 1,
+            "show_id": 10
+        },
+        {
+            "user_id": 2,
+            "show_id": 20
+        },
+        {
+            "user_id": 2,
+            "show_id": 21
+        },
+        {
+            "user_id": 2,
+            "show_id": 22
+        },
+        {
+            "user_id": 2,
+            "show_id": 23
+        },
+        {
+            "user_id": 4,
+            "show_id": 7
+        },
+        {
+            "user_id": 4,
+            "show_id": 9
+        }
+    ]
+}
